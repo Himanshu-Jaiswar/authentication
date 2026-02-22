@@ -9,7 +9,7 @@ export const generateCSRFToken = async (userId, res) => {
     await redisClient.setEx(csrfKey, 3600, csrfToken);
 
     res.cookie("csrfToken", csrfToken, {
-        httpOnly: false,
+        httpOnly: true,
         secure: true,
         sameSite:"none",
         maxAge: 60 * 60 * 1000

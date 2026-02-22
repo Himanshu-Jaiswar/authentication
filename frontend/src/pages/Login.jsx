@@ -19,7 +19,7 @@ function Login() {
       const {data} = await axios.post(`${server}/api/v1/login`, {
         email,
         password
-      });
+      },  { withCredentials: true });
       
       toast.success(data.message);
       localStorage.setItem("email", email);
