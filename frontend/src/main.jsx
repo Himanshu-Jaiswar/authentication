@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import { AppProvider } from './context/AppContext.jsx'
 
-export const server = "http://localhost:3000"
+export const server = "https://authenticationsystem01.netlify.app"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

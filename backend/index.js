@@ -23,19 +23,19 @@ export const redisClient = createClient({
 
 
 redisClient.on("error", (err) => {
-  console.error("❌ Redis Client Error:", err);
+  console.error("Redis Client Error:", err);
 });
 
 redisClient.on("connect", () => {
-  console.log("🟢 Redis socket connected");
+  console.log("Redis socket connected");
 });
 
 redisClient.on("reconnecting", () => {
-  console.log("🔄 Redis reconnecting...");
+  console.log("Redis reconnecting...");
 });
 
 redisClient.on("end", () => {
-  console.log("🔴 Redis connection closed");
+  console.log("Redis connection closed");
 });
 
 await redisClient.connect();
