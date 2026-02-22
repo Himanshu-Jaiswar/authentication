@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const server = "http://localhost:3000";
+const server = "https://authentication-backend-zyfu.onrender.com";
 
 const getCookie = (name) => {
     const value = `; ${document.cookie}`;
